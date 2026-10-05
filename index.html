@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Akshita Company - Platform System Architecture</title>
+<style>
+  @page { size: A4; margin: 15mm; }
+  body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1e293b; margin: 0; padding: 0; background-color: #fff; line-height: 1.5; }
+  .header { border-bottom: 3px solid #1e40af; padding-bottom: 15px; margin-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
+  .title { font-size: 22px; font-weight: bold; color: #1e40af; text-transform: uppercase; }
+  .subtitle { font-size: 13px; color: #64748b; }
+  .badge { background: #dbeafe; color: #1e40af; padding: 4px 10px; border-radius: 4px; font-size: 11px; font-weight: bold; }
+  
+  h2 { font-size: 15px; color: #0f172a; border-left: 4px solid #2563eb; padding-left: 8px; margin-top: 20px; margin-bottom: 10px; text-transform: uppercase; }
+  p, li { font-size: 11px; color: #334155; }
+  
+  /* NCS Layout Cards */
+  .ncs-grid { display: flex; gap: 10px; margin-bottom: 15px; }
+  .ncs-card { flex: 1; border: 1px solid #cbd5e1; border-radius: 8px; padding: 12px; background: #f8fafc; }
+  .card-blue { background: #eff6ff; border-color: #bfdbfe; }
+  .card-darkblue { background: #1e3a8a; color: white; }
+  .card-darkblue h3, .card-darkblue p { color: white; }
+  .ncs-card h3 { margin: 0 0 6px 0; font-size: 13px; color: #1e40af; }
+  .ncs-card p { margin: 0; font-size: 10px; }
+
+  /* Architecture Diagram Box */
+  .arch-box { border: 2px dashed #94a3b8; border-radius: 8px; padding: 15px; background: #fafafa; margin: 15px 0; text-align: center; }
+  .arch-layer { background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px; padding: 8px; margin: 6px 0; font-size: 11px; font-weight: bold; color: #0f172a; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+  .arch-arrow { color: #2563eb; font-weight: bold; font-size: 12px; margin: 2px 0; }
+
+  /* Table styling */
+  table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 10px; }
+  th, td { border: 1px solid #cbd5e1; padding: 6px 8px; text-align: left; }
+  th { background-color: #f1f5f9; color: #0f172a; font-weight: bold; }
+  tr:nth-child(even) { background-color: #f8fafc; }
+  
+  .footer { margin-top: 30px; border-top: 1px solid #e2e8f0; padding-top: 10px; text-align: center; font-size: 9px; color: #94a3b8; }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div>
+      <div class="title">Future Akshita Company</div>
+      <div class="subtitle">NCS-Inspired Talent & Internship Management Architecture</div>
+    </div>
+    <div class="badge">CONFIDENTIAL ARCHITECTURE PROPOSAL</div>
+  </div>
+
+  <h2>1. Platform Portal Structure (Modeled after NCS India Portal)</h2>
+  <p>The platform adapts the National Career Service multi-stakeholder layout to serve jobseekers, corporate employers, and institutional partners on a single cloud platform.</p>
+  
+  <div class="ncs-grid">
+    <div class="ncs-card card-blue">
+      <h3>For Jobseekers & Students</h3>
+      <p>Discover internship opportunities, build verifiable profiles, undergo skill-gap analysis, and track application pipelines end-to-end.</p>
+    </div>
+    <div class="ncs-card card-darkblue">
+      <h3>For Employers & Corporate</h3>
+      <p>Post opportunities, review AI-ranked candidates, run virtual interviews, track joining rates, and manage employer branding.</p>
+    </div>
+    <div class="ncs-card card-blue">
+      <h3>For Counselors & Institutes</h3>
+      <p>Provide career guidance, link college courses, verify student credentials, and manage institutional partnership MoUs.</p>
+    </div>
+  </div>
+
+  <h2>2. End-to-End System Architecture Blueprint</h2>
+  <div class="arch-box">
+    <div class="arch-layer" style="background-color: #dbeafe; color: #1e40af;">
+      PRESENTATION LAYER (React.js UI / Mobile Responsive / i18n Multi-Language)
+    </div>
+    <div class="arch-arrow">▼ (REST / HTTPS API Gateway)</div>
+    <div class="arch-layer" style="background-color: #f1f5f9;">
+      CORE SERVICES: Identity & Auth (SSO) • Internship Engine • Matching System • Virtual Job Fairs
+    </div>
+    <div class="arch-arrow">▼ (Microservices / Secure Network)</div>
+    <div class="arch-layer" style="background-color: #f1f5f9;">
+      VERIFICATION & GLOBAL LAYER: QR Certificate Engine • Multi-Currency Gateway • International Skill Pipelines
+    </div>
+    <div class="arch-arrow">▼ (ORMs & Connection Pools)</div>
+    <div class="arch-layer" style="background-color: #fef3c7; color: #92400e;">
+      DATA INFRASTRUCTURE: MySQL / PostgreSQL Database • Redis Cache • Cloud Document Storage (Resumes/Docs)
+    </div>
+  </div>
+
+  <h2>3. Core Technology Stack & Specifications</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Layer</th>
+        <th>Technology</th>
+        <th>Operational Purpose</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Frontend Interface</strong></td>
+        <td>React.js, Tailwind CSS, JavaScript</td>
+        <td>Role-specific dashboards (Student, Employer, Admin) with high responsiveness.</td>
+      </tr>
+      <tr>
+        <td><strong>Backend Services</strong></td>
+        <td>Node.js, Express.js</td>
+        <td>REST API layer handling RBAC security, applications pipeline, and data validation.</td>
+      </tr>
+      <tr>
+        <td><strong>Database Engine</strong></td>
+        <td>MySQL / PostgreSQL</td>
+        <td>Relational structure linking students, colleges, internships, selections, and certifications.</td>
+      </tr>
+      <tr>
+        <td><strong>Global & Verification Layer</strong></td>
+        <td>QR Code Engine, OAuth 2.0</td>
+        <td>Tamper-proof digital certificates and verified profile access for global employers.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Application & Selection Pipeline Workflows</h2>
+  <p><strong>Student Workflow:</strong> Register & Profile Setup ➔ Search & Filter ➔ Submit Application ➔ Shortlisted ➔ Interview Scheduled ➔ Selected ➔ Joined ➔ Completion & QR Certificate Issued.</p>
+  <p><strong>Employer Workflow:</strong> Company Verification ➔ Post Opportunity ➔ Applicant Screening ➔ Interview Management ➔ Final Selection ➔ Joining Verification.</p>
+
+  <div class="footer">
+    Future Akshita Company Platform Architecture • Inspired by NCS Government Ecosystem • Page 1 of 1
+  </div>
+
+</body>
+</html>

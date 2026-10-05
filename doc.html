@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Future Akshitha Company – Website Documentation</title>
+<style>
+  @page { size: A4; margin: 12mm; }
+  body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #0f172a;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+  
+  .page {
+    page-break-after: always;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  .page:last-child { page-break-after: avoid; }
+
+  /* Cover Page */
+  .cover {
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 40px 20px;
+  }
+  .cover-logo {
+    width: 90px;
+    height: 90px;
+    background: #2563eb;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+  .cover-title { font-size: 26pt; font-weight: 800; margin-bottom: 10px; line-height: 1.2; letter-spacing: -0.5px; }
+  .cover-subtitle { font-size: 14pt; color: #93c5fd; font-weight: 400; margin-bottom: 40px; }
+  .cover-banner {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 8px;
+    font-style: italic;
+    color: #e2e8f0;
+    margin: 20px auto;
+    max-width: 80%;
+  }
+
+  /* Structural Elements */
+  h2 { font-size: 16pt; color: #1e3a8a; border-bottom: 2px solid #2563eb; padding-bottom: 6px; margin-top: 0; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px; }
+  h3 { font-size: 12pt; color: #1e40af; margin-top: 14px; margin-bottom: 6px; }
+  p, li { color: #334155; font-size: 10.5pt; }
+  ul { margin-top: 6px; padding-left: 20px; }
+  li { margin-bottom: 6px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin-top: 12px; margin-bottom: 12px; }
+  th, td { border: 1px solid #cbd5e1; padding: 10px 12px; text-align: left; font-size: 10pt; }
+  th { background-color: #1e3a8a; color: #ffffff; font-weight: 600; text-transform: uppercase; font-size: 9pt; }
+  tr:nth-child(even) { background-color: #f8fafc; }
+
+  /* Architecture Diagram Box */
+  .diagram-box {
+    border: 2px dashed #3b82f6;
+    border-radius: 8px;
+    padding: 16px;
+    background: #eff6ff;
+    margin: 16px 0;
+    text-align: center;
+  }
+  .arch-layer {
+    background: #ffffff;
+    border: 1px solid #bfdbfe;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 8px 0;
+    font-size: 10pt;
+    font-weight: 700;
+    color: #1e3a8a;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+  }
+  .arrow { color: #2563eb; font-weight: bold; font-size: 12pt; margin: 2px 0; }
+
+  /* Infographic Box */
+  .roadmap-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 15px;
+  }
+  .roadmap-card {
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2563eb;
+    border-radius: 6px;
+    padding: 12px;
+    background: #f8fafc;
+  }
+  .roadmap-card h4 { margin: 0 0 4px 0; color: #0f172a; font-size: 11pt; }
+  .roadmap-card p { margin: 0; font-size: 9.5pt; color: #64748b; }
+
+  /* Footer */
+  .footer {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 8px;
+    text-align: center;
+    font-size: 9pt;
+    color: #94a3b8;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Page 1: Cover Page -->
+  <div class="page cover">
+    <div></div>
+    <div>
+      <div class="cover-logo">FA</div>
+      <div class="cover-title">Future Akshitha Company</div>
+      <div class="cover-subtitle">Global Talent & Internship Management Platform<br>Website Development Proposal & Architecture Blueprint</div>
+      <div class="cover-banner">
+        “Empowering careers, connecting opportunities, and building trust — globally.”
+      </div>
+    </div>
+    <div class="footer" style="border:none; color: #93c5fd;">
+      Future Akshitha Company – Client Project Proposal
+    </div>
+  </div>
+
+  <!-- Page 2: Executive Summary -->
+  <div class="page">
+    <div>
+      <h2>Page 2 – Executive Summary</h2>
+      <p>The <strong>Future Akshitha Company Platform</strong> is designed as a next-generation, centralized internship ecosystem modeled after the multi-stakeholder framework of the <strong>National Career Service (NCS) India Portal</strong>.</p>
+      
+      <h3>Core Strategic Pillars</h3>
+      <ul>
+        <li><strong>Centralized Talent Ecosystem:</strong> Seamlessly bridges candidates, global enterprises, career counselors, and academic institutions on one unified platform.</li>
+        <li><strong>AI-Driven Career Guidance:</strong> Employs intelligent matching engines to evaluate skill gaps and deliver targeted career pathways.</li>
+        <li><strong>Verifiable Infrastructure:</strong> Incorporates tamper-proof verification mechanisms for credentials, certifications, and academic MoUs.</li>
+        <li><strong>Scalable Cloud Architecture:</strong> Built on high-performance web frameworks designed for enterprise reliability, multi-language accessibility, and low-latency global delivery.</li>
+      </ul>
+    </div>
+    <div class="footer">Future Akshitha Company – Website Documentation</div>
+  </div>
+
+  <!-- Page 3: Stakeholder Overview -->
+  <div class="page">
+    <div>
+      <h2>Page 3 – Stakeholder Overview</h2>
+      <p>The platform delivers dedicated value propositions and portals tailored to four primary user roles:</p>
+      
+      <table>
+        <thead>
+          <tr>
+            <th>Stakeholder</th>
+            <th>Platform Purpose</th>
+            <th>Key Benefits</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Students & Jobseekers</strong></td>
+            <td>Discover, apply for, and track internships and career opportunities.</td>
+            <td>Verified opportunities, skill mapping, AI career advice, and digital credentials.</td>
+          </tr>
+          <tr>
+            <td><strong>Employers</strong></td>
+            <td>Post vacancies, review applicant pipelines, and manage selections.</td>
+            <td>AI applicant ranking, streamlined hiring workflows, and real-time recruitment analytics.</td>
+          </tr>
+          <tr>
+            <td><strong>Counselors & Institutes</strong></td>
+            <td>Provide career guidance and maintain institutional relationships.</td>
+            <td>Course-to-job mapping, student tracking, and digital MoU management.</td>
+          </tr>
+          <tr>
+            <td><strong>International Companies</strong></td>
+            <td>Access a verified global talent pool for cross-border projects.</td>
+            <td>Global talent exchange, international compliance, and verifiable credential engine.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">Future Akshitha Company – Website Documentation</div>
+  </div>
+
+  <!-- Page 4: Website Architecture -->
+  <div class="page">
+    <div>
+      <h2>Page 4 – Website Architecture</h2>
+      <p>A modern full-stack decoupling strategy ensures high availability, strict role-based access control (RBAC), and rapid performance.</p>
+
+      <ul>
+        <li><strong>Frontend Layer:</strong> React.js + Tailwind CSS for responsive, mobile-first stakeholder dashboards.</li>
+        <li><strong>Backend Layer:</strong> Node.js + Express.js REST APIs with JWT authentication and strict input validation.</li>
+        <li><strong>Database Layer:</strong> MySQL relational data store ensuring transactional integrity across entities.</li>
+        <li><strong>Verification & Analytics:</strong> Immutable certificate generation and real-time predictive analytics.</li>
+      </ul>
+
+      <h3>Architecture Sketch (NCS-Inspired Akshitha Company Platform)</h3>
+      <div class="diagram-box">
+        <div class="arch-layer" style="background:#dbeafe; color:#1e40af;">
+          CLIENT PRESENTATION LAYER (React.js + Tailwind CSS UI / Responsive Dashboards)
+        </div>
+        <div class="arrow">▼ (REST API / HTTPS / JWT Authentication)</div>
+        <div class="arch-layer">
+          CORE PLATFORM SERVICES (Node.js/Express APIs • Internship Engine • RBAC Module)
+        </div>
+        <div class="arrow">▼ (Secure Data Pipeline)</div>
+        <div class="arch-layer" style="background:#fef3c7; color:#92400e;">
+          PERSISTENCE & VERIFICATION LAYER (MySQL Relational DB • Certificate Engine • Analytics)
+        </div>
+      </div>
+    </div>
+    <div class="footer">Future Akshitha Company – Website Documentation</div>
+  </div>
+
+  <!-- Page 5: Core Website Modules -->
+  <div class="page">
+    <div>
+      <h2>Page 5 – Core Website Modules</h2>
+      
+      <h3>1. Authentication & Role-Based Access Control (RBAC)</h3>
+      <p>Secure JWT-driven authentication supporting distinct access policies for Students, Companies, Counselors, and System Administrators.</p>
+
+      <h3>2. Student Portal</h3>
+      <p>Comprehensive dashboard for profile creation, academic resume uploads, multi-filter internship search, dynamic application status tracking, and certificate downloads.</p>
+
+      <h3>3. Company Portal</h3>
+      <p>Corporate management interface for publishing postings, reviewing AI-ranked candidates, scheduling interview rounds, and recording candidate selections.</p>
+
+      <h3>4. Counselor Portal</h3>
+      <p>Institutional workspace for student career counseling, vocational course mapping, and company-college MoU tracking.</p>
+
+      <h3>5. Admin Portal</h3>
+      <p>Centralized governance suite for enterprise verification, platform auditing, user management, and operational analytics reporting.</p>
+    </div>
+    <div class="footer">Future Akshitha Company – Website Documentation</div>
+  </div>
+
+  <!-- Page 6: Advanced Features Roadmap -->
+  <div class="page">
+    <div>
+      <h2>Page 6 – Advanced Features Roadmap</h2>
+      <p>Strategic technological enhancements planned for upcoming development cycles:</p>
+
+      <div class="roadmap-grid">
+        <div class="roadmap-card">
+          <h4>AI Career Guidance</h4>
+          <p>Automated resume analysis, skill-gap detection, and personalized course recommendations.</p>
+        </div>
+        <div class="roadmap-card">
+          <h4>Verifiable Certificates</h4>
+          <p>QR-anchored digital certificates allowing instant credential validation by third-party recruiters.</p>
+        </div>
+        <div class="roadmap-card">
+          <h4>Gamified Learning</h4>
+          <p>Interactive skill badges and milestone rewards to boost student engagement.</p>
+        </div>
+        <div class="roadmap-card">
+          <h4>Predictive Analytics</h4>
+          <p>Data-driven recruitment funnel insights and seat-utilization reports for employers.</p>
+        </div>
+        <div class="roadmap-card">
+          <h4>Multi-Language (i18n)</h4>
+          <p>Localization support enabling global candidates and recruiters to navigate seamlessly.</p>
+        </div>
+        <div class="roadmap-card">
+          <h4>Cloud-Native Scalability</h4>
+          <p>Microservice-ready infrastructure optimized for auto-scaling and high user throughput.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">Future Akshitha Company – Website Documentation</div>
+  </div>
+
+  <!-- Page 7: Development Roadmap -->
+  <div class="page">
+    <div>
+      <h2>Page 7 – Development Roadmap</h2>
+      <p>Phased project rollout strategy defining core deliverables and quality exit conditions:</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Phase</th>
+            <th>Key Deliverables</th>
+            <th>Exit Condition</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Phase 1</strong></td>
+            <td>UI/UX Design System, Sitemap, Wireframes</td>
+            <td>Approved design & structure</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 2</strong></td>
+            <td>Database Schema, ER Modeling, Seed Data</td>
+            <td>Core data entities testable</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 3</strong></td>
+            <td>Backend APIs, Authentication, RBAC Logic</td>
+            <td>Secure, functional REST endpoints</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 4</strong></td>
+            <td>Student & Employer Portal Dashboards</td>
+            <td>End-to-end recruitment workflows</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 5</strong></td>
+            <td>Analytics Engine & Reporting Module</td>
+            <td>Real-time operational dashboards</td>
+          </tr>
+          <tr>
+            <td><strong>Phase 6</strong></td>
+            <td>Global Integration & Verification Pipeline</td>
+            <td>International partner-ready launch</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="footer">Future Akshitha Company – Website Documentation</div>
+  </div>
+
+  <!-- Page 8: Conclusion -->
+  <div class="page" style="justify-content: space-between;">
+    <div>
+      <h2>Page 8 – Conclusion</h2>
+      <p>The <strong>Future Akshitha Company Platform</strong> establishes a forward-looking digital ecosystem for global talent management and internship delivery. By integrating standard recruitment workflows with AI-backed guidance, verifiable credentials, and robust cloud infrastructure, the platform offers total operational clarity to candidates, corporate entities, and academic partners worldwide.</p>
+      
+      <div style="background: #f1f5f9; border-left: 5px solid #1e3a8a; padding: 20px; margin-top: 30px; border-radius: 4px;">
+        <p style="font-size: 13pt; font-weight: 600; color: #1e3a8a; margin: 0; text-align: center; font-style: italic;">
+          “Empowering careers, connecting opportunities, and building trust — globally.”
+        </p>
+      </div>
+    </div>
+    
+    <div class="footer">Future Akshitha Company – Website Documentation</div>
+  </div>
+
+</body>
+</html>
